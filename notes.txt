@@ -1,3 +1,4 @@
+html----------------------------------------------------------------------
 пункты меню:
 НСИ
     Товары
@@ -10,3 +11,33 @@
     Остатки
 Настройки
     Настройки системы (метод списания, контроль остатков, дата запрета)
+
+backend---------------------------------------------------------------------
+Products:
+    name
+    услуга или нет
+Приходная накладная
+    Дата
+    Products = manytomany (docproducts)
+DocProducts
+    Doc
+    product
+    quantity
+    price
+
+Расходная накладная
+    Дата
+    Products = manytomany (docproducts)
+    Услуги = manytomany (docService)
+docService
+    Doc
+    product
+    quantity
+    price
+
+движения
+    doc 
+    documentpartii
+    product
+    quantity
+    price
